@@ -1,29 +1,26 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 <head>
 <title>jQuery AJAX TEST</title>
-<meta charset="EUC=KR">
-
-<script type="text/javascript"
-        src="http://code.jquery.com/jquery-latest.js"></script>
-
+<meta charset="utf-8"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript">
-    $(document).ready(functionn(){
+    $(document).ready(function(){
         $("#button").click(function(){
             callAjax();
         });
     });
     function callAjax(){
         $.ajax({
-            type: "post"
+            type: "post",
             url : "./test2.jsp",
             data : {
                 number : $('#number').val(),
                 id : $('#id').val(),
                 comment : $('#comment').val()
-        },
-        success : whenSuccess,
-        error : whenError
+      		},
+        	success : whenSuccess,
+        	error : whenError
         });
     }
     function whenSuccess(resdata){
@@ -33,12 +30,12 @@
     function whenError(){
             alert("Error");
         }
-</script>
+	</script>
 </head>
 
 <body>
     <div style ="width: 500px; margin: auto; margin-top: 200px;">
-        <from id ="frm">
+        <form id ="frm">
             <div>
                 <label>글번호</label><input name="number" id="number">
             </div>
@@ -49,9 +46,9 @@
                 <label>코멘트</label><input name="comment" id="comment">
             </div>
             <div style="margin-top : 20px;">
-                <input id="button" type="button" value="버튼">
+                <input id="button" type="button" value="BUTTON">
             </div>
-        <from>
+        </form>
         <div id = "ajaxReturn">ajaxReturnOutput</div>
     </div>
 </body>
