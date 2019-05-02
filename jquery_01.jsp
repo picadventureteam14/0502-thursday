@@ -1,5 +1,5 @@
-<%@ page language = "java" contentType="text/html";charset="EUD-KR"
-    pageEncoding="EUC=KR"%>
+<%@ page language = "java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 
 <%
     request.setCharacterEncoding("UTF-8");
